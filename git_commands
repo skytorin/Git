@@ -4,8 +4,8 @@ git init
 # Текущее состояние
 git status
 
-#
-git add 
+# Добавляем файл для отслеживания
+git add README.md
 
 # Добавление всех файлов из текущего каталога
 git add .
@@ -39,10 +39,10 @@ git push -u origin master
 #
 git push
 
-#
+# Исключение файлов из отслеживания их изменений
 git rm --cached ./Lesson_01/.terraform
 
-#
+# Рекурсирвное исключение файлов из отслеживания их изменений
 git rm -r --cached ./Lesson_03/.terraform/
 
 
