@@ -45,4 +45,5 @@ git rm --cached ./Lesson_01/.terraform
 #
 git rm -r --cached ./Lesson_03/.terraform/
 
-
+# Просмотр удаленных репозитариев проекта
+git remote -v
