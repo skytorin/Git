@@ -39,6 +39,9 @@ git push -u origin master
 #
 git push
 
+#
+git pull
+
 # Исключение файлов из отслеживания их изменений
 git rm --cached ./Lesson_01/.terraform
 
