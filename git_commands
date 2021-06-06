@@ -1,8 +1,20 @@
+# Просмотр версии приложения git
+git verion
+
 # Инициализация репозитария
 git init
 
 # Текущее состояние
 git status
+
+#
+git show
+
+# Показывает все имеющиеся коммиты с их ID
+git log
+
+# Откат к последнему закомиченному состоянию
+git restore
 
 # Добавляем файл для отслеживания
 git add README.md
@@ -16,9 +28,17 @@ git commit -m "My First Commit"
 # Создание файла в котором будут задаваться исключаемые файлы
 touch .gitignore
 
-# 
+# Задание констант имени и емейла для всей системы
+git config --system user.name "SkyTorin"
+git config --system user.email "nick555@bk.ru"
+
+# Задание настроек для всех репозиториеа одного конкретного пользователя
 git config --global user.name "SkyTorin"
 git config --global user.email "nick555@bk.ru"
+
+# Задание констант имени и емейла для одного конкретного репозитария
+git config --local user.name "SkyTorin"
+git config --local user.email "nick555@bk.ru"
 
 # Просмтор всех веток проекта
 git branch
@@ -36,10 +56,10 @@ git checkout master
 git remote add origin git@github.com:skytorin/Terraform.git
 git push -u origin master
 
-#
+# Отправить все последние закомиченные изменения на аккаунт GitHub
 git push
 
-#
+# Получить последние изменения с аккаунта GitHub
 git pull
 
 # Исключение файлов из отслеживания их изменений
@@ -48,5 +68,14 @@ git rm --cached ./Lesson_01/.terraform
 # Рекурсирвное исключение файлов из отслеживания их изменений
 git rm -r --cached ./Lesson_03/.terraform/
 
-# Просмотр удаленных репозитариев проекта
+# Просмотр удаленных репозитариев проекта в аккаунте на GitHub
 git remote -v
+
+
+# Показывает изменения в файле с момента последнего коммита
+git diff
+
+
+
+
+
