@@ -25,10 +25,20 @@ git add .
 # Коммит файлов репозитария
 git commit -m "My First Commit"
 
+# Добавления и коммит всех ранее добавленных файлов
+git commit -am "My Add and commit"
+
 # Создание файла в котором будут задаваться исключаемые файлы
 touch .gitignore
 
-# Задание констант имени и емейла для всей системы
+# Присеры  исключения файлов из отслеживаня, находящиеся в .gitignore
+*.py[cod]             - будут игнорироваться файлы следующих расширений: *.pyc, *.pyo, *.pyd
+name.yaml             - игнорируется один конкретный файл
+log/                  - игнорируется папка log
+resources/main.json   - игнорируется файл находящийся в папке
+
+
+# Задание констант имени и емейла для всей системы, которые отражаютмся в коммитах
 git config --system user.name "SkyTorin"
 git config --system user.email "nick555@bk.ru"
 
@@ -40,17 +50,26 @@ git config --global user.email "nick555@bk.ru"
 git config --local user.name "SkyTorin"
 git config --local user.email "nick555@bk.ru"
 
-# Просмтор всех веток проекта
-git branch
+# Просмтор всех имеющихся веток проекта
+git branch -a
 
 # Создание новой ветки
-git branch test
+git branch new-api
 
-# Удаление ветки
-git branch -D test
+# Переход в ранее созданную ветку new-api
+git checkout new-api
 
-# Переход в какую либо ветку
-git checkout master
+# Создает и переходит в новую ветку new-api2
+git checkout -b new-api2
+
+# Cлияние веток
+git merge new-api
+
+# Удаление ветки которая была хотя бы единожды замержена
+git branch -d new-api
+
+# Удаление ветки которая не была ни разу смержена
+git branch -D new-api
 
 #
 git remote add origin git@github.com:skytorin/Terraform.git
@@ -68,9 +87,8 @@ git rm --cached ./Lesson_01/.terraform
 # Рекурсирвное исключение файлов из отслеживания их изменений
 git rm -r --cached ./Lesson_03/.terraform/
 
-# Просмотр удаленных репозитариев проекта в аккаунте на GitHub
+# Просмотр репозитариев проекта в сети, в аккаунте на GitHub
 git remote -v
-
 
 # Показывает изменения в файле с момента последнего коммита
 git diff
