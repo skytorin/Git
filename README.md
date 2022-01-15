@@ -13,7 +13,7 @@ cd ~/.ssh && ssh-keygen
 ```
 Публичную часть необходимо залить на GitHub
 
-## 1. Команды статусов и получения дополнительно й информации 
+## 1. Команды статусов и получения дополнительной информации 
 Просмотр версии приложения git
 ```bash
 git verion
@@ -74,7 +74,7 @@ git commit -am "My Add and commit"
 ```bash
 git commit --amend
 ```
-Добавления файла в последней коммит:
+Добавление файла в последней коммит:
 ```bash
 git add missed-file.txt
 git commit --amend
@@ -85,7 +85,7 @@ git commit --amend
 ```bash
 touch .gitignore
 ```
-Примеры исключения файлов из отслеживаня, находящиеся в .gitignore
+Примеры исключений файлов из отслеживания, находящиеся в .gitignore
 ```bash
 *.py[cod]             # будут игнорироваться файлы следующих расширений: *.pyc, *.pyo, *.pyd
 name.yaml             # игнорируется один конкретный файл
@@ -99,7 +99,7 @@ resources/main.json   # игнорируется файл находящийся
 git config --system user.name "MyUserNamE"
 git config --system user.email "MyEmail"
 ```
-Задание констант имени и емейла для всех репозитория одного конкретного пользователя
+Задание констант имени и емейла для всех репозиториев одного конкретного пользователя
 ```bash
 git config --global user.name "MyUserName"
 git config --global user.email "MyEmail"
@@ -110,7 +110,7 @@ git config --local user.name "MyUserName"
 git config --local user.email "MyEmail"
 ```
 
-## 6. Работвка с ветками репозитария
+## 6. Работа с ветками репозитария
 Просмтор всех имеющихся веток проекта
 ```bash
 git branch -a
