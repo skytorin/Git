@@ -19,7 +19,7 @@ cd ~/.ssh && ssh-keygen
 ```bash
 . ~/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
-export PS1='\[\033[36m\] \w$(__git_ps1 "\[\033[32m\](%s)")\[\033[34m\]$ \[\033[37m\]'
+export PS1='\[\033[36m\] \w:$(__git_ps1 "\[\033[32m\](%s)")\[\033[34m\]$ \[\033[37m\]' 
 ```
 или с выводом текщего времени
 ```bash
