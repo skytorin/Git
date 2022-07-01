@@ -163,6 +163,15 @@ git branch -d new-api
 ```bash
 git branch -D new-api
 ```
+Синхронизация локальных веток с ветками удаленного репозитария
+```
+git fetch --prune
+```
+или
+```
+git fetch -p
+```
+
 
 ## 9. Работа с внешним Git репозитарием
 Просмотр имёни/адреса внешнего репозитария, связанного с текущим локальным репозитарием
@@ -238,4 +247,48 @@ git reset -- file_name.ext
 git checkout -- file_name.ext
 ```
 Если после add, но до коммита найден ошибочно добавленный файл/папка, то такой же ресет поможет убрать его из следующего коммита
+
+
+
+## Git Flow
+
+git branch -a
+
+git checkout master
+git pull
+
+git branch release-1.0.0
+git checkout release-1.0.0
+git push --set-upsteram origin release-1.0.0 
+
+
+Created/Added/Edited feature
+
+git commit -am "Created Feature"
+git push
+
+Gitlab GUI: Creeate merge request (release-1.0.0 to master) --->  Approve ---> Merge
+
+git checkout master
+git pull
+
+git fetch -p
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
